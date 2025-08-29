@@ -1,0 +1,23 @@
+{
+  "name": "sobha-test",
+  "version": "1.0.0",
+  "main": "countries.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/talha9072/sobha-test.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/talha9072/sobha-test/issues"
+  },
+  "homepage": "https://github.com/talha9072/sobha-test#readme",
+  "description": "",
+  "dependencies": {
+    "@sendgrid/mail": "^8.1.5"
+  }
+}

@@ -8,7 +8,7 @@ export async function handler(event, context) {
     const data = JSON.parse(event.body);
 
     const msg = {
-      to: data.email || "test@example.com", // form se aaya email ya fallback
+      to: data.email || "talhashahid978@gmail.com", // form se aaya email ya fallback
       from: "no-reply@yourdomain.com",     // SendGrid me verified sender
       subject: "Test from Netlify Function",
       text: "Testing works awesome 🎉",

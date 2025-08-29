@@ -1198,7 +1198,35 @@ I deal with Yamen Moallem he gave me the best option in the market and I am look
   <input type="text" name="buyer_type" />
 </form>
 
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.querySelector("form[name='popup-contact']");
 
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault(); // stop normal form submit
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData.entries());
+
+    try {
+      // Call Netlify Function
+      const response = await fetch("/.netlify/functions/sendMail", {
+        method: "POST",
+        body: JSON.stringify({ email: data.email }), // 👈 user ka email
+      });
+
+      const result = await response.json();
+      alert(result.message || "Form submitted!");
+    } catch (err) {
+      console.error(err);
+      alert("Something went wrong sending the email.");
+    }
+
+    // Abhi bhi Netlify Forms ke liye form submit karwana ho toh:
+    form.submit();
+  });
+});
+</script>
     </div><!-- /.page-wrapper -->
 
 
